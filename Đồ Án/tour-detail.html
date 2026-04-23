@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Chi Tiết Tour - TourGo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+
+
+	<style>
+		.tour-hero { background-size: cover; background-position: center; height: 400px; border-radius: 8px; position: relative; }
+		.tour-hero::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); border-radius: 8px; }
+		.tour-title-overlay { position: absolute; bottom: 20px; left: 20px; color: white; z-index: 2; }
+		.tour-detail-section { margin: 40px 0; }
+		.price-box { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #0074D9; }
+		.booking-form { background: #f8f9fa; padding: 20px; border-radius: 8px; }
+	</style>
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-expand-lg bg-light sticky-top">
+		<div class="container-fluid px-4" style="max-width: 100%; display: flex; justify-content: center;">
+			<div style="width: 100%; max-width: 1100px; display: flex; align-items: center; justify-content: space-between;">
+				<a href="index.html" class="navbar-brand d-flex align-items-center gap-2 fw-bold">
+					<img src="images/logo.jpg" alt="TourGo logo" width="40" height="40" style="border-radius:8px;object-fit:cover;">
+					<span>TourGo</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="mainNav" style="justify-content: center; flex-basis: auto;">
+					<ul class="navbar-nav gap-lg-3" style="align-items: center;">
+						<li class="nav-item"><a class="nav-link" href="index.html#home">Trang chủ</a></li>
+						<li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html#about">Giới Thiệu</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html#faq">Hỏi đáp</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main class="container" style="padding:40px 16px;">
+	<div class="row">
+		<!-- Tour Info (Left) -->
+		<div class="col-lg-8">
+			<!-- Hero Image -->
+			<div id="tourHero" class="tour-hero mb-4" style="background-image: url('images/tour1.jpg');">
+				<div class="tour-title-overlay">
+					<h1 id="tourTitle" style="margin: 0; font-size: 2rem;">Tour Title</h1>
+				</div>
+			</div>
+
+			<!-- Tour Details -->
+			<div class="tour-detail-section">
+				<h3>Mô Tả Tour</h3>
+				<p id="tourDesc">Chi tiết tour sẽ hiển thị ở đây...</p>
+			</div>
+
+			<div class="tour-detail-section">
+				<h3>Thông Tin Tour</h3>
+				<table class="table table-bordered">
+					<tr>
+						<td><strong>Thời gian:</strong></td>
+						<td id="tourDuration">-</td>
+					</tr>
+					<tr>
+						<td><strong>Điểm xuất phát:</strong></td>
+						<td id="tourDeparture">-</td>
+					</tr>
+					<tr>
+						<td><strong>Bao gồm:</strong></td>
+						<td id="tourIncludes">Ăn sáng, vé vào cửa, hướng dẫn viên</td>
+					</tr>
+					<tr>
+						<td><strong>Độ tuổi phù hợp:</strong></td>
+						<td id="tourAge">Tất cả độ tuổi</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- Booking Form (Right) -->
+		<div class="col-lg-4">
+			<div class="booking-form sticky-top" style="top: 100px;">
+				<div class="price-box mb-3">
+					<div style="font-size: 0.9rem; color: #666;">Giá từ</div>
+					<h2 id="tourPrice" style="color: #0074D9; margin: 8px 0;">1.199.000đ</h2>
+					<small style="color: #666;">/khách (giá tốt nhất)</small>
+				</div>
+
+				<form id="bookingForm" class="needs-validation">
+					<div class="mb-3">
+						<label class="form-label">Họ tên *</label>
+						<input type="text" class="form-control" name="fullname" required>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Số điện thoại *</label>
+						<input type="tel" class="form-control" name="phone" required>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Email</label>
+						<input type="email" class="form-control" name="email">
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Số lượng khách *</label>
+						<select class="form-select" name="quantity" required>
+							<option value="1">1 khách</option>
+							<option value="2">2 khách</option>
+							<option value="3">3 khách</option>
+							<option value="4">4 khách</option>
+							<option value="5">5 khách</option>
+							<option value="6">6 khách hoặc hơn</option>
+						</select>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Ngày khởi hành *</label>
+						<input type="date" class="form-control" name="departDate" required>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Ghi chú</label>
+						<textarea class="form-control" name="notes" rows="3" placeholder="Yêu cầu đặc biệt..."></textarea>
+					</div>
+
+					<button type="submit" class="btn btn-primary w-100 btn-lg">Đặt Tour Ngay</button>
+					<button type="button" class="btn btn-outline-primary w-100 mt-2">Gọi tư vấn: 1900-1234</button>
+				</form>
+
+				<div class="mt-3 p-3 bg-light rounded" style="font-size: 0.9rem;">
+					<strong>✓ Xác nhận nhanh trong 24h</strong><br>
+					<strong>✓ Bảo hiểm du lịch toàn chuyến</strong><br>
+					<strong>✓ Hỗ trợ 24/7</strong>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer class="site-footer bg-dark text-light mt-5 pt-5">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-lg-3 col-md-6 mb-4">
+					<h5 class="fw-bold mb-3">Về TourGo</h5>
+					<p class="small text-light-emphasis">Công ty du lịch hàng đầu Việt Nam, chuyên cung cấp tour chất lượng cao với giá tốt nhất.</p>
+					<div class="d-flex gap-2 mt-3">
+						<a class="btn btn-outline-light btn-sm" aria-label="Facebook">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
+						</a>
+						<a class="btn btn-outline-light btn-sm" aria-label="Instagram">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+						</a>
+						<a class="btn btn-outline-light btn-sm" aria-label="YouTube">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
+						</a>
+						<a class="btn btn-outline-light btn-sm" aria-label="Twitter">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X">
+						</a>
+					</div>
+				</div>
+
+				<div class="col-lg-2 col-md-6 mb-4">
+					<h6 class="fw-bold mb-3">Khám Phá</h6>
+					<ul class="list-unstyled small">
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Tour Trong Nước</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Tour Nước Ngoài</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Giới Thiệu</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Hỏi đáp</a></li>
+						<li><a class="text-decoration-none text-light-emphasis">Liên Hệ</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-2 col-md-6 mb-4">
+					<h6 class="fw-bold mb-3">Chính Sách</h6>
+					<ul class="list-unstyled small">
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Điều Khoản Sử Dụng</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Chính Sách Bảo Mật</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Chính Sách Hoàn Tiền</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Thanh Toán & Giao Dịch</a></li>
+						<li><a class="text-decoration-none text-light-emphasis">Câu Hỏi Thường Gặp</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-3 col-md-6 mb-4">
+					<h6 class="fw-bold mb-3">Liên Hệ & Hỗ Trợ</h6>
+					<ul class="list-unstyled small">
+						<li class="mb-2">
+							<strong>Hotline:</strong><br>
+							<a class="text-decoration-none text-light-emphasis">1900-1234</a>
+						</li>
+						<li class="mb-2">
+							<strong>Email:</strong><br>
+							<a class="text-decoration-none text-light-emphasis">info@tourgovietnam.com</a>
+						</li>
+						<li class="mb-2">
+							<strong>Địa chỉ:</strong><br>
+							<span class="text-light-emphasis">123 Đường Du Lịch, Q. Hoàn Kiếm, Hà Nội</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="border-top border-secondary pt-4 d-flex justify-content-between align-items-center flex-wrap gap-3">
+				<div class="small text-light-emphasis">
+					© 2025 <strong>TourGo</strong>. All rights reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script>
+	// Tour data (từ các trang tours.html)
+	const toursData = {
+		'tour-1': {
+			title: 'Hạ Long',
+			price: '3.500.000',
+			image: 'images/1.jpg',
+			desc: 'Du thuyền, khám phá hang động, thưởng thức hải sản',
+			duration: '3 ngày 2 đêm',
+			departure: 'Hà Nội',
+		},
+		'tour-2': {
+			title: 'Sapa',
+			price: '1.450.000',
+			image: 'images/2.jpg',
+			desc: 'Trekking, bản làng, trải nghiệm giao lưu văn hoá',
+			duration: '2 ngày 1 đêm',
+			departure: 'Hạ Long',
+		},
+		'tour-3': {
+			title: 'Phú Quốc',
+			price: '5.600.000',
+			image: 'images/3.jpg',
+			desc: 'Nghỉ dưỡng 5 sao, massage, ăn uống, vui chơi',
+			duration: '4 ngày 3 đêm',
+			departure: 'Hà Tĩnh',
+		},
+		'tour-4': {
+			title: 'Đã Nẵng - Hội An',
+			price: '2.800.000',
+			image: 'images/4.jpg',
+			desc: 'Tham quan di tích, tắm biển, khám phá ẩm thực',
+			duration: '3 ngày 2 đêm',
+			departure: 'Hà Nội',
+		},
+		'tour-5': {
+			title: 'Thám Hiểm Tây Bắc',
+			price: '4.300.000',
+			image: 'images/5.jpg',
+			desc: 'Leo núi, cắm trại, khám phá thiên nhiên, cảnh vật',
+			duration: '3 ngày 2 đêm',
+			departure: 'Đà Nẵng',
+		},
+		'tour-6': {
+			title: 'Bangkok',
+			price: '6.200.000',
+			image: 'images/6.jpg',
+			desc: 'Thưởng thức ẩm thực đường phố, mua sắm',
+			duration: '3 ngày 2 đêm',
+			departure: 'Nha Trang',
+		},
+		'tour-7': {
+			title: 'Nha Trang',
+			price: '2.100.000',
+			image: 'images/7.jpg',
+			desc: 'Biển, lặn ngắm san hô, nghỉ dưỡng du thuyền',
+			duration: '2 ngày 1 đêm',
+			departure: 'TP.HCM',
+		},
+		'tour-8': {
+			title: 'Đà Lạt',
+			price: '1.900.000',
+			image: 'images/8.jpg',
+			desc: 'Tham quan đồi hoa, cà phê, thời tiết mát mẻ',
+			duration: '1 ngày',
+			departure: 'Quảng Nam',
+		},
+		'tour-9': {
+			title: 'Năm Mới Bay Cao',
+			price: '1.199.000',
+			image: 'images/9.jpg',
+			desc: 'Lưu trú 3N2Đ, tham quan điểm nổi bật, ăn sáng',
+			duration: '2 ngày 1 đêm',
+			departure: 'Ninh Bình',
+		},
+		'tour-10': {
+			title: 'Tết Vui Gia Đình',
+			price: '1.450.000',
+			image: 'images/10.jpg',
+			desc: 'Hành trình 2N1Đ trên du thuyền, buffet hải sản',
+			duration: '3 ngày 2 đêm',
+			departure: 'Yên Bái',
+		},
+		'tour-11': {
+			title: 'Festive Escape',
+			price: '2.199.000',
+			image: 'images/11.jpg',
+			desc: 'Resort 4 sao, vé vui chơi, đưa đón sân bay',
+			duration: '2 ngày 1 đêm',
+			departure: 'Cát Bà',
+		},
+		'tour-12': {
+			title: 'Khám Phá Miền Trung',
+			price: '2.999.000',
+			image: 'images/12.jpg',
+			desc: 'Bãi biển, ẩm thực địa phương và tham quan',
+			duration: '2 ngày 1 đêm',
+			departure: 'Kon Tum',
+		},
+		'tour-13': {
+			title: 'Lễ Hội Đặc Sắc',
+			price: '1.699.000',
+			image: 'images/13.jpg',
+			desc: 'Trekking nhẹ, thưởng thức ẩm thực núi rừng',
+			duration: '4 ngày 3 đêm',
+			departure: 'Thượng Hải',
+		},
+		'tour-14': {
+			title: 'Tết Nghỉ Dưỡng',
+			price: '1.299.000',
+			image: 'images/14.jpg',
+			desc: 'Spa, ăn tối lãng mạn và trải nghiệm bãi biển',
+			duration: '5 ngày 4 đêm',
+			departure: 'Tây An',
+		},
+		'tour-15': {
+			title: 'Hòn Tằm Relax',
+			price: '1.450.000',
+			image: 'images/15.jpg',
+			desc: 'Hành trình 2N1Đ trên du thuyền, buffet hải sản',
+			duration: '4 ngày 3 đêm',
+			departure: 'Kunming',
+		},
+		'tour-16': {
+			title: 'Cù Lao Chàm',
+			price: '1.650.000',
+			image: 'images/16.jpg',
+			desc: 'Tham quan di sản, trải nghiệm văn hoá địa phương',
+			duration: '5 ngày 4 đêm',
+			departure: 'Queenstown',
+		},
+		'tour-17': {
+			title: 'Hành Trình Văn Hóa',
+			price: '2.790.000',
+			image: 'images/17.jpg',
+			desc: 'Tham quan di sản, trải nghiệm văn hoá địa phương',
+			duration: '6 ngày 5 đêm',
+			departure: 'Reykjavik',
+		},
+		'tour-18': {
+			title: 'Ruộng Bậc Thang',
+			price: '1.550.000',
+			image: 'images/18.jpg',
+			desc: 'Trải nghiệm nông thôn, trekking, ẩm thực bản địa',
+			duration: '7 ngày 6 đêm',
+			departure: 'Punta Arenas',
+		},
+		'tour-19': {
+			title: 'Cát Bà Ngoài Trời',
+			price: '1.250.000',
+			image: 'images/19.jpg',
+			desc: 'Leo núi, bơi, khám phá thiên nhiên và ẩm thực',
+			duration: '3 ngày 2 đêm',
+			departure: 'Bangkok',
+		},
+		'tour-20': {
+			title: 'Kon Tum Văn Hóa Tây Nguyên',
+			price: '3.820.000',
+			image: 'images/tour26.jpg',
+			desc: 'Thăm bản làng, giao lưu văn hóa, ẩm thực độc đáo',
+			duration: '4 ngày 3 đêm',
+			departure: 'Phuket',
+		},
+		'tour-21': {
+			title: 'Bắc Kinh & Tử Cấm Thành',
+			price: '3.199.000',
+			image: 'images/21.jpg',
+			desc: 'Tham quan di tích, ẩm thực Bắc Kinh truyền thống',
+			duration: '3 ngày 2 đêm',
+			departure: 'Siem Reap',
+		},
+		'tour-22': {
+			title: 'Hồng Kông Sôi Động',
+			price: '4.299.000',
+			image: 'images/22.jpg',
+			desc: 'Mua sắm, tham quan Victoria Peak, ăn vặt đường phố',
+			duration: '3 ngày 2 đêm',
+			departure: 'Luang Prabang',
+		},
+		'tour-23': {
+			title: 'Đài Loan Ẩm Thực & Văn Hóa',
+			price: '3.999.000',
+			image: 'images/23.jpg',
+			desc: 'Chợ đêm, Đài Trung và kinh nghiệm văn hóa đặc sắc',
+			duration: '3 ngày 2 đêm',
+			departure: 'Kuala Lumpur',
+		},
+		'tour-24': {
+			title: 'Vạn Lý Trường Thành & Bắc Kinh',
+			price: '4.250.000',
+			image: 'images/24.jpg',
+			desc: 'Lịch trình có hướng dẫn viên, tham quan biểu tượng lịch sử',
+			duration: '2 ngày 1 đêm',
+			departure: 'Singapore',
+		},
+		'tour-25': {
+			title: 'Hồng Kông Ẩm Thực',
+			price: '3.899.000',
+			image: 'images/25.jpg',
+			desc: 'Mua sắm, ẩm thực đường phố và tham quan',
+			duration: '4 ngày 3 đêm',
+			departure: 'Bali'
+		},
+		'tour-26': {
+			title: 'Thượng Hải Hiện Đại',
+			price: '4.550.000',
+			image: 'images/26.jpg',
+			desc: 'Phố cổ Zhujiajiao, Tháp Tuyết, trải nghiệm đô thị',
+			duration: '2 ngày 1 đêm',
+			departure: 'Jakarta',
+
+		},
+		'tour-27': {
+			title: 'Tây An Di Sản Lịch Sử',
+			price: '5.250.000',
+			image: 'images/27.jpg',
+			desc: 'Quân đội đất nung, cung điện cổ, văn hoá Đường',
+			duration: '3 ngày 2 đêm',
+			departure: 'Chiang Mai',
+		},
+		'tour-28': {
+			title: 'Kunming - Dali Phương Tây Yunnan',
+			price: '4.750.000',
+			image: 'images/28.jpg',
+			desc: 'Hồ Erhai, phố cổ, thiên nhiên và ẩm thực miền Nam',
+			duration: '3 ngày 2 đêm',
+			departure: 'Hồ Chí Minh',
+		},
+		'tour-29': {
+			title: 'Trượt Tuyết Cao Cấp',
+			price: '6.800.000',
+			image: 'images/29.jpg',
+			desc: 'Trọn gói resort, lift pass, hướng dẫn viên',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-30': {
+			title: 'Ski & Stay',
+			price: '8.900.000',
+			image: 'images/30.jpg',
+			desc: 'Phù hợp gia đình, trường dạy trượt cho trẻ em',
+			duration: '2 ngày 1 đêm',
+			departure: 'Brunei',
+		},
+		'tour-31': {
+			title: 'Australia',
+			price: '5.900.000',
+			image: 'images/31.jpg',
+			desc: 'Phù hợp gia đình, trường dạy trượt cho trẻ em',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-32': {
+			title: 'Trượt Tuyết Phiêu Lưu',
+			price: '9.500.000',
+			image: 'images/32.jpg',
+			desc: 'Backcountry, hướng dẫn viên chuyên nghiệp',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-33': {
+			title: 'Weekend Ski',
+			price: '3.800.000',
+			image: 'images/33.jpg',
+			desc: '2N3Đ, phù hợp cho kỳ nghỉ cuối tuần ngắn',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-34': {
+			title: 'Luxury Snow Escape',
+			price: '10.200.000',
+			image: 'images/34.jpg',
+			desc: 'Trải nghiệm cao cấp, ẩm thực đỉnh và spa',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-35': {
+			title: 'Snow Adventure',
+			price: '11.800.000',
+			image: 'images/35.jpg',
+			desc: 'Ngắm Bắc cực quang (nếu thời vụ), trượt tuyết tự do',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-36': {
+			title: 'Lapland - Bắc Cực Quang',
+			price: '18.900.000',
+			image: 'images/36.jpg',
+			desc: 'Ngắm cực quang, trải nghiệm văn hoá Sami',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-37': {
+			title: 'Japan Ski Weekend',
+			price: '5.600.000',
+			image: 'images/37.jpg',
+			desc: 'Gói ngắn ngày cho cuối tuần, bao gồm lift pass',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-38': {
+			title: 'New Zealand Mùa Đông',
+			price: '14.500.000',
+			image: 'images/38.jpg',
+			desc: 'Trượt tuyết cao cấp, bungee jumping, cảnh quan hùng vĩ',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-39': {
+			title: 'Iceland - Cực Quang & Mùa Đông',
+			price: '19.800.000',
+			image: 'images/39.jpg',
+			desc: 'Ngắm cực quang, suối nước nóng, khám phá lạnh giá',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-40': {
+			title: 'Chile - Patagonia Phiêu Lưu',
+			price: '21.500.000',
+			image: 'images/40.jpg',
+			desc: 'Trekking, núi Fitz Roy, sông băng Perito Moreno',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-41': {
+			title: 'Bangkok Đêm Sôi Động',
+			price: '1.899.000',
+			image: 'images/41.jpg',
+			desc: 'Chợ nổi, chùa vàng, ẩm thực đường phố',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-42': {
+			title: 'Phuket - Phang Nga Biển & Đảo',
+			price: '2.450.000',
+			image: 'images/42.jpg',
+			desc: 'Biển, đảo James Bond, lặn ngắm san hô',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-43': {
+			title: 'Siem Reap - Angkor Wat Di Sản',
+			price: '2.100.000',
+			image: 'images/43.jpg',
+			desc: 'Tham quan di sản thế giới, lịch sử Khmer',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-44': {
+			title: 'Luang Prabang Linh Thiêng',
+			price: '1.750.000',
+			image: 'images/44.jpg',
+			desc: 'Chùa chiền, sông Mekong, trải nghiệm văn hóa',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-45': {
+			title: 'Kuala Lumpur Hiện Đại',
+			price: '1.980.000',
+			image: 'images/45.jpg',
+			desc: 'Tháp đôi Petronas, mua sắm, ẩm thực đa sắc',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-46': {
+			title: 'Singapore - Sư Tử Thành',
+			price: '2.200.000',
+			image: 'images/46.jpg',
+			desc: 'Gardens by the Bay, Marina Bay, công viên chủ đề',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-47': {
+			title: 'Bali - Thiên Đường Nhiệt Đới',
+			price: '2.650.000',
+			image: 'images/47.jpg',
+			desc: 'Bãi biển, đền thờ, resort spa, trí tuệ nhân loại',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-48': {
+			title: 'Jakarta - Kota Tua & Museum',
+			price: '1.350.000',
+			image: 'images/48.jpg',
+			desc: 'Thành phố cổ, bảo tàng, ẩm thực thế giới',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-49': {
+			title: 'Chiang Mai Cổ Kính',
+			price: '1.680.000',
+			image: 'images/49.jpg',
+			desc: 'Chùa chiền, nông trại voi, trekking rừng vàng',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-50': {
+			title: 'HCM - Mekong Delta',
+			price: '1.450.000',
+			image: 'images/50.jpg',
+			desc: 'Chiến tranh, chợ nổi, làng nổi, ẩm thực Nam',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-51': {
+			title: 'Manila - Boracay Hành Trình',
+			price: '2.300.000',
+			image: 'images/51.jpg',
+			desc: 'Biển trắng, lặn, bãi cát trắng, khám phá đảo',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+		'tour-52': {
+			title: 'Bandar Seri Begawan',
+			price: '1.520.000',
+			image: 'images/52.jpg',
+			desc: 'Cung điện, thánh đường, cuộc sống Hồi giáo cổ kính',
+			duration: '4 ngày 3 đêm',
+			departure: 'Manila',
+		},
+	};
+
+	document.addEventListener('DOMContentLoaded', function() {
+		const params = new URLSearchParams(window.location.search);
+		const tourId = params.get('id') || 'tour-1';
+		const tour = toursData[tourId];
+
+		if (tour) {
+			document.getElementById('tourTitle').textContent = tour.title;
+			document.getElementById('tourDesc').textContent = tour.desc;
+			document.getElementById('tourPrice').textContent = tour.price + 'đ';
+			document.getElementById('tourDuration').textContent = tour.duration;
+			document.getElementById('tourDeparture').textContent = tour.departure;
+			document.getElementById('tourHero').style.backgroundImage = `url('${tour.image}')`;
+		}
+
+		// Handle form submission
+		document.getElementById('bookingForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			alert('Cảm ơn bạn đã đặt tour!');
+			this.reset();
+		});
+	});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

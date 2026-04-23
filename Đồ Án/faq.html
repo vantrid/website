@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hỏi đáp - TourGo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+<header>
+	<!-- ...same navbar as other pages... -->
+	<nav class="navbar navbar-expand-lg bg-light sticky-top">
+		<!-- ...existing header markup ... -->
+		<div class="container-fluid px-4" style="max-width: 100%; display: flex; justify-content: center;">
+			<div style="width: 100%; max-width: 1100px; display: flex; align-items: center; justify-content: space-between;">
+				<a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+					<img src="images/logo.jpg" alt="TourGo logo" width="40" height="40" style="border-radius:8px;object-fit:cover;">
+					<span>TourGo</span>
+				</a>
+				<!-- ...nav links... -->
+				<div class="collapse navbar-collapse" id="mainNav" style="justify-content: center; flex-basis: auto;">
+					<ul class="navbar-nav gap-lg-3" style="align-items: center;">
+						<li class="nav-item"><a class="nav-link" href="index.html#home">Trang chủ</a></li>
+						<li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+						<li class="nav-item"><a class="nav-link active" href="faq.html">Hỏi đáp</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main class="container py-5">
+	<section id="faq" aria-labelledby="faq-title">
+		<h2 id="faq-title" class="section-title mb-4">Câu Hỏi Thường Gặp</h2>
+		<div class="accordion" id="faqAccordion">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+						Làm sao để đặt tour?
+					</button>
+				</h2>
+				<div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Bạn có thể tìm tour yêu thích từ danh sách trên trang, chọn gói phù hợp, và nhấn "Đặt ngay". Điền thông tin liên hệ, chúng tôi sẽ gọi xác nhận trong 24h.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+						Có thể hủy tour được không?
+					</button>
+				</h2>
+				<div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có. Bạn có thể hủy tour trước 7 ngày khởi hành mà không mất phí. Nếu hủy trong vòng 7 ngày, sẽ tính phí 20-50% tùy theo tour.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+						Phương thức thanh toán là gì?
+					</button>
+				</h2>
+				<div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Chúng tôi chấp nhận thanh toán qua: chuyển khoản ngân hàng, thẻ tín dụng, ví điện tử (Momo, ZaloPay), hoặc thanh toán trực tiếp tại văn phòng. Khách hàng cần thanh toán 30% tiền đặt cọc, số còn lại thanh toán trước 5 ngày khởi hành.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+						Tour có bao gồm bảo hiểm du lịch không?
+					</button>
+				</h2>
+				<div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có. Tất cả các gói tour của chúng tôi đều bao gồm bảo hiểm du lịch toàn chuyến với mức bảo hiểm từ 100 triệu đồng, bảo vệ khách hàng trong trường hợp xảy ra sự cố.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+						Tôi cần những giấy tờ gì để đi tour?
+					</button>
+				</h2>
+				<div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Bạn cần chuẩn bị: CCCD/Hộ chiếu còn hiệu lực, bằng lái xe (nếu tour có lái xe của cá nhân), thẻ bảo hiểm y tế. Đối với tour nước ngoài, cần có visa hoặc hộ chiếu có giá trị từ 6 tháng trở lên.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+						Có chiết khấu nhóm không?
+					</button>
+				</h2>
+				<div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có. Chúng tôi cung cấp chiết khấu cho các nhóm từ 10 người trở lên. Liên hệ trực tiếp với bộ phận bán hàng để được tư vấn mức giá tốt nhất cho nhóm của bạn.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+						Có thể thay đổi ngày khởi hành không?
+					</button>
+				</h2>
+				<div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có thể. Nếu thay đổi trước 7 ngày khởi hành sẽ không tính phí. Nếu thay đổi trong vòng 7 ngày, sẽ tính phí 10% tổng giá trị tour. Tuỳ theo tình hình tour, có thể không có ngày khởi hành khác phù hợp.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+						Tour có phù hợp cho trẻ em và người già không?
+					</button>
+				</h2>
+				<div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Hoàn toàn phù hợp. Chúng tôi có các tour dành riêng cho gia đình với trẻ em, cũng như tour dành cho người lớn tuổi với lịch trình nhẹ nhàng. Hãy liên hệ để được tư vấn tour phù hợp nhất.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+						Nếu bị ốm đường đi thì sao?
+					</button>
+				</h2>
+				<div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Hướng dẫn viên của chúng tôi được đào tạo sơ cấp cứu và có kit y tế sẵn sàng. Chúng tôi sẽ đưa bạn đến cơ sở y tế gần nhất nếu cần. Bảo hiểm du lịch sẽ hỗ trợ chi phí y tế.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+						Liên hệ để được tư vấn thêm ở đâu?
+					</button>
+				</h2>
+				<div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Bạn có thể liên hệ chúng tôi qua: Hotline 1800-1234, Email: info@tourgo.vn, hoặc ghé thăm văn phòng tại 123 Đường Nguyễn Huệ, Quận 1, TP.HCM. Hỗ trợ khách hàng 24/7, mỗi ngày.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11" aria-expanded="false" aria-controls="faq11">
+						Có thể đặt tour cùng với người bạn và chi tiền lẻ không?
+					</button>
+				</h2>
+				<div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có. TourGo hỗ trợ tính tiền theo từng cá nhân, bạn có thể thanh toán riêng. Chúng tôi sẽ cung cấp hóa đơn chi tiết cho từng người.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12">
+						Làm sao để tìm tour phù hợp với bộ lạc gia đình tôi?
+					</button>
+				</h2>
+				<div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Bạn có thể lọc tour theo: thời gian, địa điểm, giá tiền, loại tour. Hoặc liên hệ trực tiếp với bộ phận tư vấn để được gợi ý tour phù hợp nhất.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq13" aria-expanded="false" aria-controls="faq13">
+						Có tour cho người khuyết tật hay có nhu cầu đặc biệt không?
+					</button>
+				</h2>
+				<div id="faq13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có. Chúng tôi có các tour được thiết kế đặc biệt cho người khuyết tật, người cao tuổi, trẻ em. Vui lòng liên hệ sớm để chúng tôi chuẩn bị.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq14" aria-expanded="false" aria-controls="faq14">
+						Có thể xin một phòng riêng trong tour không?
+					</button>
+				</h2>
+				<div id="faq14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có. Phòng đơn hoặc đôi sẽ tính thêm phí. Liên hệ để được tư vấn chi tiết về các tùy chọn phòng và mức phí bổ sung.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq15" aria-expanded="false" aria-controls="faq15">
+						Tour nào phù hợp cho người sợ độ cao hoặc không thích hoạt động ngoài trời?
+					</button>
+				</h2>
+				<div id="faq15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Rất nhiều tour. Chúng tôi có tour tập trung vào tham quan di tích, ăn uống, mua sắm, trải nghiệm văn hóa. Hãy liên hệ để được tư vấn!</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq16" aria-expanded="false" aria-controls="faq16">
+						Nếu chuyến bay bị hủy do thời tiết thì sao?
+					</button>
+				</h2>
+				<div id="faq16" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Nếu chuyến bay bị hủy do thời tiết (không phải lỗi của TourGo), bạn có thể lựa chọn: hoàn tiền hoặc đổi sang ngày khác mà không mất phí. Chi phí chênh lệch xe cộ sẽ được tính riêng.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq17" aria-expanded="false" aria-controls="faq17">
+						Tôi có thể mang theo vật nuôi trong tour được không?
+					</button>
+				</h2>
+				<div id="faq17" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Thường thì không, nhưng bạn có thể liên hệ để thảo luận. Chúng tôi sẽ xem xét từng trường hợp riêng và tìm giải pháp phù hợp.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq18" aria-expanded="false" aria-controls="faq18">
+						Tour nào không có hoạt động mạnh, phù hợp cho trẻ nhỏ?
+					</button>
+				</h2>
+				<div id="faq18" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Chúng tôi có rất nhiều tour gia đình với lịch trình nhẹ nhàng, phù hợp cho trẻ nhỏ. Ví dụ: Phú Quốc Resort, Đà Nẵng - Hội An, Nha Trang. Liên hệ để biết chi tiết!</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq19" aria-expanded="false" aria-controls="faq19">
+						Có thể mang theo đồ ăn, nước riêng không?
+					</button>
+				</h2>
+				<div id="faq19" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có thể. Tuy nhiên, chúng tôi khuyến khích bạn thưởng thức ẩm thực địa phương. Nếu có yêu cầu đặc biệt (dị ứng, ăn chay...), vui lòng thông báo sớm.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq20" aria-expanded="false" aria-controls="faq20">
+						Nếu muốn quay lại tour cũ, có ưu đãi không?
+					</button>
+				</h2>
+				<div id="faq20" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+					<div class="accordion-body">Có! Khách hàng lặp lại (từng đi tour với TourGo trước) sẽ được giảm giá 5-10% cho tour tiếp theo. Còn chương trình VIP dành cho khách trung thành với nhiều ưu đãi hơn.</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="site-footer bg-dark text-light mt-5 pt-5">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-lg-3 col-md-6 mb-4">
+					<h5 class="fw-bold mb-3">Về TourGo</h5>
+					<p class="small text-light-emphasis">Công ty du lịch hàng đầu Việt Nam, chuyên cung cấp tour chất lượng cao với giá tốt nhất.</p>
+					<div class="d-flex gap-2 mt-3">
+						<a class="btn btn-outline-light btn-sm" aria-label="Facebook">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
+						</a>
+						<a class="btn btn-outline-light btn-sm" aria-label="Instagram">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+						</a>
+						<a class="btn btn-outline-light btn-sm" aria-label="YouTube">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
+						</a>
+						<a class="btn btn-outline-light btn-sm" aria-label="Twitter">
+							<img class="social-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X">
+						</a>
+					</div>
+				</div>
+
+				<div class="col-lg-2 col-md-6 mb-4">
+					<h6 class="fw-bold mb-3">Khám Phá</h6>
+					<ul class="list-unstyled small">
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Tour Trong Nước</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Tour Nước Ngoài</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Giới Thiệu</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Hỏi đáp</a></li>
+						<li><a class="text-decoration-none text-light-emphasis">Liên Hệ</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-2 col-md-6 mb-4">
+					<h6 class="fw-bold mb-3">Chính Sách</h6>
+					<ul class="list-unstyled small">
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Điều Khoản Sử Dụng</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Chính Sách Bảo Mật</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Chính Sách Hoàn Tiền</a></li>
+						<li class="mb-2"><a class="text-decoration-none text-light-emphasis">Thanh Toán & Giao Dịch</a></li>
+						<li><a class="text-decoration-none text-light-emphasis">Câu Hỏi Thường Gặp</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-3 col-md-6 mb-4">
+					<h6 class="fw-bold mb-3">Liên Hệ & Hỗ Trợ</h6>
+					<ul class="list-unstyled small">
+						<li class="mb-2">
+							<strong>Hotline:</strong><br>
+							<a class="text-decoration-none text-light-emphasis">1900-1234</a>
+						</li>
+						<li class="mb-2">
+							<strong>Email:</strong><br>
+							<a class="text-decoration-none text-light-emphasis">info@tourgovietnam.com</a>
+						</li>
+						<li class="mb-2">
+							<strong>Địa chỉ:</strong><br>
+							<span class="text-light-emphasis">123 Đường Du Lịch, Q. Hoàn Kiếm, Hà Nội</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="border-top border-secondary pt-4 d-flex justify-content-between align-items-center flex-wrap gap-3">
+				<div class="small text-light-emphasis">
+					© 2025 <strong>TourGo</strong>. All rights reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
